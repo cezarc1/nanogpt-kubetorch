@@ -5,7 +5,7 @@ ENV PYTHONUNBUFFERED=1 \
     UV_LINK_MODE=copy
 
 RUN apt-get update && \
-    apt-get install -y --no-install-recommends git curl ca-certificates rsync && \
+    apt-get install -y --no-install-recommends build-essential git curl ca-certificates rsync && \
     rm -rf /var/lib/apt/lists/*
 
 RUN python -m pip install --no-cache-dir uv
