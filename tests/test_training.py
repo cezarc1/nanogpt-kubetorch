@@ -22,7 +22,7 @@ def test_build_smoke_command_uses_reduced_shakespeare_config():
     assert "--device=cuda" in command
 
 
-def test_build_baseline_command_uses_upstream_default_config():
+def test_build_baseline_command_uses_full_schedule_with_eager_execution():
     config = TrainingConfig(output_dir=Path("results"))
 
     command = build_baseline_command(config)
@@ -33,6 +33,7 @@ def test_build_baseline_command_uses_upstream_default_config():
         "config/train_shakespeare_char.py",
         "--out_dir=results/out-shakespeare-char",
         "--device=cuda",
+        "--compile=False",
     ]
 
 

@@ -57,6 +57,7 @@ def build_baseline_command(config: TrainingConfig) -> list[str]:
         "config/train_shakespeare_char.py",
         f"--out_dir={out_dir}",
         f"--device={config.device}",
+        "--compile=False",
     ]
 
 

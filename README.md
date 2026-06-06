@@ -26,6 +26,11 @@ docker buildx build \
   --push .
 ```
 
+
+## Baseline notes
+
+`baseline` runs the full upstream `config/train_shakespeare_char.py` schedule, but sets `--compile=False` by default. The cezar-4090 cluster hit Triton CUDA launch failures with `torch.compile` on this image/driver stack after the compiler prerequisite was fixed, so eager execution is the stable baseline for Kubetorch workflow validation.
+
 ## Kubetorch runs
 
 ```bash
