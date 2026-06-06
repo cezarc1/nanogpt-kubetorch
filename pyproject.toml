@@ -1,0 +1,28 @@
+[project]
+name = "nanogpt-kubetorch"
+version = "0.1.0"
+description = "Kubetorch batch-run smoke tests for pinned nanoGPT workloads"
+requires-python = ">=3.11"
+dependencies = [
+    "httpx>=0.28.0",
+    "rich>=13.9.0",
+    "typer>=0.12.5",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3.5",
+]
+
+[project.scripts]
+nanogpt-kubetorch = "nanogpt_kubetorch.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["nanogpt_kubetorch"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]

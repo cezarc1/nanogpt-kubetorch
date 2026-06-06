@@ -1,0 +1,8 @@
+{
+  "commit": "47f8b30a07a3d816bdb63805d9828a7ed5bcb39c",
+  "fetched_paths": [
+    "python_client/kubetorch/docs/guides/batch_runs.rst",
+    "python_client/kubetorch/docs/index.rst"
+  ],
+  "repo": "https://github.com/cezarc1/kubetorch"
+}
